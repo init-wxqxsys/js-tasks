@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="hdr"></header>
+    <main id="main">
+      <section id="sec">
+        <article id="art">
+          <p id="p1">text</p>
+          <span id="sp1"></span>
+        </article>
+      </section>
+    </main>
+    <footer id="ftr"></footer>
+
+    <script>
+        function getSiblings(elem) {
+            return {
+                prev: elem.previousElementSibling,
+                next: elem.nextElementSibling
+            }
+        }
+
+        alert(getSiblings(document.getElementById("hdr")).next);
+    </script>
+  </body>
+</html>

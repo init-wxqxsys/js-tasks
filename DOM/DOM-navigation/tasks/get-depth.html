@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="hdr"></header>
+    <main id="main">
+      <section id="sec">
+        <article id="art">
+          <p id="p1">text</p>
+          <span id="sp1"></span>
+        </article>
+      </section>
+    </main>
+    <footer id="ftr"></footer>
+
+    <script>
+      function getDepth(elem) {
+        let depth = 0;
+
+        while (document.body !== elem) {
+            elem = elem.parentElement;
+            depth++;
+        }
+
+        return depth;
+      }
+
+      alert(getDepth(document.body));
+      alert(getDepth(document.getElementById("hdr")));
+      alert(getDepth(document.getElementById("main")));
+      alert(getDepth(document.getElementById("sec")));
+      alert(getDepth(document.getElementById("art")));
+      alert(getDepth(document.getElementById("p1")));
+      alert(getDepth(document.getElementById("sp1")));
+      alert(getDepth(document.getElementById("ftr")));
+    </script>
+  </body>
+</html>

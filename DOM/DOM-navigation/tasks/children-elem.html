@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <div>Пользователи:</div>
+    <ul>
+      <li>Джон</li>
+      <li>Пит</li>
+    </ul>
+
+    <script>
+      const div = document.body.firstElementChild; // получили первый элемент внутри <body>
+      const ul = document.body.children[document.body.children.length - 2]; // получили предпоследний элемент внутри <body>, пометка: почему не lastElementChild? 
+      // Потому что <script> тоже тег и в результате будет выведен он, а не тег, который нам нужен
+
+        const li2 = ul.lastElementChild;
+
+      console.log(div);
+      console.log(ul);
+      console.log(li2);
+    </script>
+  </body>
+</html>

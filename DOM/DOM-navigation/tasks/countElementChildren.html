@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="a">
+      <span></span>
+      привет
+      <!-- коммент -->
+      <b></b>
+    </div>
+    <div id="b">только текст</div>
+    <div id="c"><i></i><i></i></div>
+
+    <script>
+      function countElementChildren(node) {
+        return node.children.length;
+      }
+
+      alert(countElementChildren(document.getElementById("a"))); // 2
+      alert(countElementChildren(document.getElementById("b"))); // 0
+      alert(countElementChildren(document.getElementById("c"))); // 2
+      alert(countElementChildren(document.createElement("div"))); // 0
+    </script>
+  </body>
+</html>
